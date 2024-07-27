@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping</title>
+</head>
+<body>
+    <h1>Sri Sai Enterprises</h1>
+    <button onclick="window.location.href='{% url 'create_category' %}'">Add Category</button>
+    <button onclick="window.location.href='{% url 'create_product' %}'">Add Products</button>
+    <p>Click on below categories to see related products:</p>
+
+    {% for cat in categories %}
+        <a href="/category/{{cat.name}}/">{{cat.name}}</a> </br>
+    {% endfor %}
+</body>
+</html>

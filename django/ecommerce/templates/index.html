@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+</head>
+<body>
+    <h1>Store</h1>
+    <h1>Categories</h1>
+    <div>
+        {% for category in categories %}
+            <p><a href="/category/{{category.name}}/">{{category}}</a></p>
+        {% endfor %}
+    </div>
+    <h1>Products</h1>
+    <div>
+        {% for product in products %}
+           <b> Name:</b><p>{{product.product_name}}</p>
+           <b> Category:</b><p>{{product.category}}</p>
+           <b> Description:</b><p>{{product.desc}}</p>
+           <b> Created date:</b><p>{{product.created_date}}</p>
+        {% endfor %}
+    </div>
+</body>
+</html>
